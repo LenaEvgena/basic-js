@@ -16,20 +16,20 @@ module.exports = function transform(arr) {
     if (newArray[i] === dn) {
       if (i !== newArray.length - 1) {
         newArray.splice(i, 2);
-        i = i - 2;
+        // i = i + 2;
       } else if (i === (newArray.length - 1)) {
         newArray.splice(i, 1);
-        i--;
+        // i++;
       }
     }
 
     if (newArray[i] === dp) {
       if (i !== 0) {
         newArray.splice((i - 1), 2);
-        i = i - 2;
+        // i = i + 2;
       } else if (i === 0) {
         newArray.splice(i, 1);
-        i--;
+        // i++;
       }
     }
 
