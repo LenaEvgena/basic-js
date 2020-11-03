@@ -4,10 +4,11 @@ module.exports = function getSeason(date) {
   if (!date) return 'Unable to determine the time of year!';
   if (!date.getTime()) throw new Error;
 
-  let month = date.getMonth();
-  if (month === 11 || month <= 1) return 'winter';
-  if (month > 1 && month < 5) return 'spring';
-  if (month > 4 && month < 8) return 'summer';
-  if (month > 7 && month < 11) return 'autumn';
+  let monthD = date.getMonth();
 
-}
+  if (monthD === 11 || monthD <= 1) return 'winter';
+  if (monthD > 1 && monthD < 5) return 'spring';
+  if (monthD > 4 && monthD < 8) return 'summer';
+  if (monthD > 7 && monthD < 11) return 'autumn';
+
+};
